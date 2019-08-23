@@ -1,0 +1,167 @@
+<!--  -->  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <link rel="icon" href="static/images/favicon-16x16.png" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+          url(../static/images/forest.jpg); */
+        background-position: center;
+        background-color: #951c49;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        color: #fff;
+      }
+      .caption{
+          width: 100%;
+          max-width:100%;
+          text-align: center !important;
+      }
+      .img-div{
+          margin-bottom:6vh; 
+          transition: .6s;
+          transform: scale(0.9);
+      }
+      .img-div:hover{
+       
+        transform: scale(1.1);
+    }
+        
+        .img-div img{
+            
+        animation: animate 2s 1;
+        width: 200px;
+        height: 200px;
+            
+      }
+      h1 {
+        animation: animate 2s 1;
+        font-size: 1.5rem;
+        text-shadow: .1rem .1rem .8rem black;
+        padding-bottom: 1.6rem;
+        text-transform: uppercase;
+        font-size: 50px;
+      }
+      .fa {
+        animation: animate 2s 1;
+      }
+      .btn-lg {
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid #fff;
+        transition: 0.6s ease;
+        animation: animate 2s 1;
+        margin-top: 10vh;
+        border-width: medium;
+        border-width: medium;
+        border-radius: 0;
+        padding: 0.6rem 1.3rem;
+        font-size: 1.1rem;
+      }
+      @keyframes animate {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      .social {
+        margin-top: 2vh;
+      }
+    
+    .social a {
+        cursor: pointer;
+        padding: 0px 20px;
+        display: inline-block;
+        animation: animate 2s 1;
+        text-decoration: none;
+      }
+      i.fa {
+        font-size: 38px;
+        color: #951c49;
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
+      i.fa:hover {
+       
+        color:rgba(0, 212, 255, 1);
+        transform: scale(1.2);
+      }
+  .blue-btn{
+  height: 64px;
+  font: normal normal 700 1em/4em Arial,sans-serif;
+  overflow: hidden;
+  width: 200px;
+  background-color: #3b5998;
+  border-radius: 20px;
+  transition: 0.6s ease;
+  animation: animate 2s 1;
+}
+
+.blue-btn:hover{
+   background-color: #003D60;
+  
+}
+
+.blue-btn a:hover{
+  text-decoration: none;
+}
+
+.first-link{
+  margin-top: 0em;   
+}
+
+.blue-btn:hover .first-link{
+  margin-top: -4em;
+}
+    </style>
+    <section class="cover-main" id="home">
+      <div class="wrapper">
+
+
+          
+
+          <div class="caption">
+            <h1>welcome to Galascore</h1>          
+        </div>
+        <div class="blue-btn">
+            <a class="first-link text-center" href="">
+              Get Started
+            </a>
+          
+          </div>
+    
+        
+
+
+      </div>
+    </section>
+  </body>
+</html>

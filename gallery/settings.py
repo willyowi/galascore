@@ -30,8 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [7
-    'galascore'
+INSTALLED_APPS = [
+    'galascore.apps.GalascoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
