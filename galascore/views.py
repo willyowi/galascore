@@ -12,7 +12,7 @@ def welcome(request):
 def pic_today(request):
     date = dt.date.today()
     news = Article.todays_news()
-    return render(request, 'all-news/today-news.html', {"date": date,"news":news}) 
+    return render(request, 'all-pics/today-pics.html', {"date": date,"news":news}) 
 
 
 # def convert_dates(dates):
