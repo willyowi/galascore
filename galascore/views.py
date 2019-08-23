@@ -9,10 +9,10 @@ import datetime as dt
 def welcome(request):
     return render(request, 'welcome.html')
 
-# def pic_today(request):
-#     date = dt.date.today()
-#     # news = Article.todays_news()
-#      return render(request, 'all-news/today-news.html', {"date": date,"news":news}) 
+def pic_today(request):
+    date = dt.date.today()
+    news = Article.todays_news()
+    return render(request, 'all-news/today-news.html', {"date": date,"news":news}) 
 
 
 # def convert_dates(dates):
