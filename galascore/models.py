@@ -28,24 +28,34 @@ class tags(models.Model):
 
     def __str__(self):
         return self.name
+class Location(models.Model):
+    name = models.CharField(max_length = 30) 
+           
 
 
-class Details(models.Model):
+class Image(models.Model):
     title = models.CharField(max_length =100)
-    post = models.TextField()
+    image = models.ImageField(upload_to = 'images/')
+    details = models.TextField()
     postee = models.ForeignKey(Postee)
+    location = models.ForeignKey(Location)
+    category = models .ForeignKey(Category)
 
-    #many to many r-ship= many articles having many tags together
+    #many to many r-ship= many images having many tags together
     tags = models.ManyToManyField(tags)
 
-    #adding timestaps for dates for articles
+    #adding timestaps for dates for image
     pub_date = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):
         return self.title
-    def save_Article(self):
+    def save_Image(self):
         self.save()
 
+    @classmethod 
+    def todays_images(cls):
+        today =dt.date.today()
+        
 
 
