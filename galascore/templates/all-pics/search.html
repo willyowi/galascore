@@ -15,8 +15,12 @@
 
   {% if images %}
     {% for image in images %}
+    
       <div class="col-sm-6 col-md-3">
           <h1>{{image.title}}</h1>
+      </div>
+      <div class="col-md-8">
+          <p>{{image.details}}</p>
       </div>
     {% endfor %}
   {% endif %}

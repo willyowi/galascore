@@ -23,7 +23,8 @@
     </div>
 
    <div class="row">
-     <p> <em>Posted {{image.pub_date|timesince}} by {{image.editor.first_name}}</em> </p>
+     <p> <em>Posted {{image.pub_date|timesince}} by {{image.postee.first_name}}</em> </p>
    </div>
 
  </div>
+ {% endblock %}
