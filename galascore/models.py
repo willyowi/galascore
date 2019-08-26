@@ -60,7 +60,7 @@ class Image(models.Model):
         self.save()
 
     @classmethod 
-    def todays_images(cls):
+    def today_images(cls):
         today=dt.date.today()
         galascore = cls.objects.filter(pub_date__date = today)
         return galascore
