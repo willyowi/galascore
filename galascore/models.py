@@ -19,4 +19,13 @@ class Editor(models.Model):
         self.save() 
 
     class Meta:
-        ordering = ['first_name']      
+        ordering = ['first_name']
+
+
+class tags(models.Model):
+    name = models.CharField(max_length =30)
+
+
+    def __str__(self):
+        return self.name
+                  
