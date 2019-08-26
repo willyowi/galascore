@@ -3,6 +3,32 @@
 {% block content %}
 {{block.super}}
 
+<div class="contaioner">
+    {% for galascore_item in galascore%}
+    <div class="row">
+
+        <!-- display title -->
+        <div class="col-md-5">
+            <h2 class="text-center">{{ galascore_item.tittle}}</h2>
+
+        </div>
+        <div class="col-md-7">
+                <img src="{{galascore_item.image_image.url}}" class="img-responsive" alt="Image">
+
+
+
+        </div>
+
+    </div>
+    {% empty %}
+    <div class="row">
+      <h2 class="text-center">There No News Items</h2>
+    </div>
+    {% endfor %}
+
+
+</div>
+
 
 
 {% endblock %}

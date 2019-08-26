@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http  import HttpResponse,Http404
 import datetime as dt
+from .models import Image
 
 
 # Create your views here.
@@ -12,8 +13,8 @@ def welcome(request):
 
 def pic_today(request):
     date = dt.date.today()
-    #news = Article.todays_news()
-    return render(request, 'all-pics/today-pics.html', {"date": date}) 
+    galascore = Image.today_images()
+    return render(request, 'all-pics/today-pics.html', {"date": date,"galascore":galascore}) 
 
 
 def convert_dates(dates):
