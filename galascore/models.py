@@ -37,3 +37,6 @@ class Details(models.Model):
 
     #many to many r-ship= many articles having many tags together
     tags = models.ManyToManyField(tags)
+
+    #adding timestaps for dates for articles
+    pub_date = models.DateTimeField(auto_now_add=True)
