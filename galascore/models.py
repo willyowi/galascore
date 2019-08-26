@@ -15,7 +15,7 @@ class Postee(models.Model):
 
 
     #  save the messages
-    def save_editor(self):
+    def save_postee(self):
         self.save() 
 
     class Meta:
@@ -30,7 +30,7 @@ class tags(models.Model):
         return self.name
 
 
-# class Article(models.Model):
-#     title = models.CharField(max_length =100)
-#     post = models.TextField()
-#     editor = models.ForeignKey(Editor)
+class Details(models.Model):
+    title = models.CharField(max_length =100)
+    post = models.TextField()
+    postee = models.ForeignKey(Postee)
