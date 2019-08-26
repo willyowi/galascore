@@ -31,6 +31,8 @@ class tags(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length= 40)
+    def __str__(self):
+        return self.name                                    
 
 class Location(models.Model):
     name = models.CharField(max_length = 30) 
@@ -74,8 +76,8 @@ class Image(models.Model):
 
     @classmethod
     def search_by_title(cls,search_term):
-        news = cls.objects.filter(title__icontains=search_term)
-        return galascore
+        image = cls.objects.filter(title__icontains=search_term)
+        return image
 
 
 
