@@ -16,4 +16,7 @@ class Editor(models.Model):
 
     #  save the messages
     def save_editor(self):
-        self.save()    
+        self.save() 
+
+    class Meta:
+        ordering = ['first_name']      
