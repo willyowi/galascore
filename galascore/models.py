@@ -12,3 +12,8 @@ class Editor(models.Model):
     # querrying the database
     def __str__(self):
         return self.first_name
+
+
+    #  save the messages
+    def save_editor(self):
+        self.save()    
