@@ -72,6 +72,10 @@ class Image(models.Model):
         galascore = cls.objects.filter(pub_date__date = date)
         return galascore    
 
-        
+    @classmethod
+    def search_by_title(cls,search_term):
+        news = cls.objects.filter(title__icontains=search_term)
+        return galascore
+
 
 

@@ -28,9 +28,25 @@ def convert_dates(dates):
      day = days[day_number]
      return day  
 
+
+
 def image(request,image_id):
-    try:
-        article = Article.objects.get(id = article_id)
-    except DoesNotExist:
-        raise Http404()
-    return render(request,"all-news/image-details.html", {"image":image})
+     try:
+         image = Image.objects.get(id = image_id)
+     except DoesNotExist:
+         raise Http404()
+     return render(request,"all-picss/image-details.html", {"image":image})
+
+
+def search_results(request):
+
+    if 'article' in request.GET and request.GET["image"]:
+        search_term = request.GET.get("image")
+        searched_images = Image.search_by_title(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'all-pics/search.html',{"message":message,"images": searched_images})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-pics/search.html',{"message":message})
