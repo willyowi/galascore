@@ -41,9 +41,9 @@ class Location(models.Model):
 
 class Image(models.Model):
     title = models.CharField(max_length =100)
-    image = models.ImageField(upload_to = 'images/')
+    image = models.ImageField(upload_to = 'pics/')
     details = models.TextField()
-    postee = models.ForeignKey(Postee)
+    Postee = models.ForeignKey(Postee)
     location = models.ForeignKey(Location)
     category = models .ForeignKey(Category)
 
@@ -52,6 +52,7 @@ class Image(models.Model):
 
     #adding timestaps for dates for image
     pub_date = models.DateTimeField(auto_now_add=True)
+
 
 
     def __str__(self):
@@ -64,6 +65,12 @@ class Image(models.Model):
         today=dt.date.today()
         galascore = cls.objects.filter(pub_date__date = today)
         return galascore
+
+
+    @classmethod
+    def days_news(cls,date):
+        galascore = cls.objects.filter(pub_date__date = date)
+        return galascore    
 
         
 

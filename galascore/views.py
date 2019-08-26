@@ -13,7 +13,7 @@ def welcome(request):
 
 def pic_today(request):
     date = dt.date.today()
-    galascore = Image.today_images()
+    galascore = Image.objects.all()
     return render(request, 'all-pics/today-pics.html', {"date": date,"galascore":galascore}) 
 
 
@@ -27,3 +27,10 @@ def convert_dates(dates):
      # Returning the actual day of the week
      day = days[day_number]
      return day  
+
+def image(request,image_id):
+    try:
+        article = Article.objects.get(id = article_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"all-news/image-details.html", {"image":image})
