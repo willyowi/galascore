@@ -2,7 +2,7 @@ from django.db import models
 import datetime as dt
 
 # Create your models here.
-class Editor(models.Model):
+class Postee(models.Model):
     first_name = models.CharField(max_length =30)
     last_name = models.CharField(max_length =30)
     email = models.EmailField()
@@ -28,4 +28,9 @@ class tags(models.Model):
 
     def __str__(self):
         return self.name
-                  
+
+
+# class Article(models.Model):
+#     title = models.CharField(max_length =100)
+#     post = models.TextField()
+#     editor = models.ForeignKey(Editor)
