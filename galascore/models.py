@@ -40,3 +40,12 @@ class Details(models.Model):
 
     #adding timestaps for dates for articles
     pub_date = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return self.title
+    def save_Article(self):
+        self.save()
+
+
+
