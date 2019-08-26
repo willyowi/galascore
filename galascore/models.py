@@ -34,3 +34,6 @@ class Details(models.Model):
     title = models.CharField(max_length =100)
     post = models.TextField()
     postee = models.ForeignKey(Postee)
+
+    #many to many r-ship= many articles having many tags together
+    tags = models.ManyToManyField(tags)
