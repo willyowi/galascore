@@ -21,7 +21,7 @@ A django personal gallery application that displays my photos for others to see.
 # DISPLAY
 
 ## landing page :book:
-![screenshot](app/static/photos/landland.png)
+![screenshot](galascore/static/photos/landland.png)
 
 
 ## SETUP
