@@ -16,11 +16,13 @@
   {% if images %}
     {% for image in images %}
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
+                <h1>Category: <em style="color: lightcyan;">{{image.category}}</em></h1>
+
             
             <h1>Location: <em style="color: lightcyan;">{{image.location}}</em></h1>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-8">
 
             <p><img src="{{image.image.url}}" width="700px"  alt="" class="img responsive"></p>
         </div>
@@ -29,10 +31,13 @@
     </div>
     <div class="row">
         
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-4">
       </div>
-      <div class="col-md-7">
-          <p>{{image.details}}</p>
+      <div class="col-md-7 card-body" >
+          <p style="color: lightcyan">{{image.details}}</p><br>
+          
+        <p style="color: black"> <em> Published on {{image.pub_date}} by {{ image.Postee}}</em></p>
+    
       </div>
       <div class="col-md-4"></div>
     {% endfor %}
