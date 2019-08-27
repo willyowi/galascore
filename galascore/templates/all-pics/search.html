@@ -11,17 +11,30 @@
 
   </div>
 
-  <div class="row">
+ 
 
   {% if images %}
     {% for image in images %}
-    
+    <div class="row">
+        <div class="col-md-3">
+            
+            <h1>Location: <em style="color: lightcyan;">{{image.location}}</em></h1>
+        </div>
+        <div class="col-md-9">
+
+            <p><img src="{{image.image.url}}" width="700px"  alt="" class="img responsive"></p>
+        </div>
+
+
+    </div>
+    <div class="row">
+        
       <div class="col-sm-6 col-md-3">
-          <h1>{{image.title}}</h1>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-7">
           <p>{{image.details}}</p>
       </div>
+      <div class="col-md-4"></div>
     {% endfor %}
   {% endif %}
   </div>
