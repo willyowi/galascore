@@ -2,7 +2,7 @@
 GALASCORE
 
 ## AUTHOR
-Wilson Owino
+By **wilson owino** :100:
 
 ## DESCRIPTION
 A django personal gallery application that displays my photos for others to see.
@@ -19,6 +19,9 @@ A django personal gallery application that displays my photos for others to see.
 
 
 # DISPLAY
+
+## landing page :book:
+![screenshot](app/static/photos/landland.png)
 
 
 ## SETUP
