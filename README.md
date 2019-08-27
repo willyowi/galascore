@@ -23,7 +23,7 @@ A django personal gallery application that displays my photos for others to see.
 ## landing page :book:
 ![screenshot](galascore/static/photos/landing.png)
 ## category search 
-![screenshot](galascore/static/photos/category search.png)
+![screenshot](galascore/static/photos/search.png)
 ## search results
 ![screenshot](galascore/static/photos/messi.png)
 
